@@ -49,7 +49,7 @@ int main() {
                             if(tempSum > answer){
                                 answer = tempSum;
                             }
-                            if((firstMove == 2) && (secondMove == 2)) cout<<tempSum;
+                            if((firstMove == 2) && (secondMove == 1)) cout<<tempSum;
                         }
                     }
                 }
