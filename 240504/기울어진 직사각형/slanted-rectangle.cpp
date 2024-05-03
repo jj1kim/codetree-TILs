@@ -29,22 +29,17 @@ int main() {
                     if((i-secondMove >= 0) && (j-secondMove >= 0)){
                         if(((i-secondMove-firstMove) >=0) && ((j-secondMove+firstMove) >=0) && (j-secondMove+firstMove <= n)){
                             int tempSum = 0;
-                            int tempchange[10];
                             for(int temp = 0; temp <= firstMove; temp++){
                                 tempSum += arr[i-temp][j+temp];
-                                tempchange[temp] = j+temp;
                             }
                             for(int temp = 1; temp <= secondMove; temp++){
                                 tempSum += arr[i-firstMove-temp][j+firstMove-temp];
-                                tempchange[2+temp] = j+firstMove-temp;
                             }
                             for(int temp = 1; temp <= secondMove; temp++){
                                 tempSum += arr[i-temp][j-temp];
-                                tempchange[4+temp] = j-temp;
                             }
                             for(int temp = 1; temp <= firstMove-1; temp++){
                                 tempSum += arr[i-secondMove-temp][j-secondMove+temp];
-                                tempchange[6+temp] = i-secondMove-temp;
                             }
                             if(tempSum > answer){
                                 answer = tempSum;
