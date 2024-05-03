@@ -44,7 +44,7 @@ int main() {
                 if(moneyNum > KsMaxMoneyNum) KsMaxMoneyNum = moneyNum;
             }
         }
-        if((KsMaxMoneyNum * m) >= floor(pow((2*k)+1, 2) / 2)){
+        if((KsMaxMoneyNum * m) >= ceil(pow((2*k)+1, 2) / 2)){
             if(KsMaxMoneyNum > MaxMoneyNum) MaxMoneyNum = KsMaxMoneyNum;
         }
 
