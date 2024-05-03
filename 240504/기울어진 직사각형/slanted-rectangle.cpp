@@ -27,7 +27,7 @@ int main() {
             for(int firstMove = 1; firstMove <= maxFirstMove; firstMove++){
                 for(int secondMove = 1; secondMove <= (upMaxMove - firstMove); secondMove++){
                     if((i-secondMove >= 0) && (j-secondMove >= 0)){
-                        if((i-secondMove-firstMove >=0) && (j-secondMove+firstMove >=0) && (j-secondMove+firstMove <= j)){
+                        if(((i-secondMove-firstMove) >=0) && ((j-secondMove+firstMove) >=0) && (j-secondMove+firstMove <= j)){
                             int tempSum = 0;
                             int tempchange[10];
                             for(int temp = 0; temp <= firstMove; temp++){
@@ -49,6 +49,7 @@ int main() {
                             if(tempSum > answer){
                                 answer = tempSum;
                             }
+                            if((firstMove == 2) && (secondMove == 2)) cout<<tempSum;
                         }
                     }
                 }
