@@ -27,10 +27,10 @@ int main() {
 
     //일자모양 블록의 세로형
     int one_col = 0;
-    for(int i=0; i<m; i++){
-        for(int j=0; j<n-2; j++){
+    for(int i=0; i<n-2; i++){
+        for(int j=0; j<m; j++){
             int sum = 0;
-            sum += arr[j][i] + arr[j][i+1] + arr[j][i+2];
+            sum += arr[i][j] + arr[i+1][j] + arr[i+2][j];
             if(sum > one_col) one_col = sum;
         }
     }
