@@ -29,7 +29,7 @@ int main() {
             else repeatNum += 1;
         }
         if(savedRepeatNum < repeatNum) savedRepeatNum = repeatNum;
-        if(repeatNum >= m) total +=1;
+        if(savedRepeatNum >= m) total +=1;
     }
 
     for(int i=0; i<n; i++){
@@ -45,7 +45,7 @@ int main() {
             else repeatNum += 1;
         }
         if(savedRepeatNum < repeatNum) savedRepeatNum = repeatNum;
-        if(repeatNum >= m) total +=1;
+        if(savedRepeatNum >= m) total +=1;
     }
 
     cout << total;
