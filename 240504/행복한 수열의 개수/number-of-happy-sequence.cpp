@@ -18,27 +18,33 @@ int main() {
 
     for(int i=0; i<n; i++){
         int target = 0;
+        int savedRepeatNum = 0;
         int repeatNum = 0;
         for(int j=0; j<n; j++){
             if(arr[i][j] != target){
+                if(savedRepeatNum < repeatNum) savedRepeatNum = repeatNum;
                 target = arr[i][j];
                 repeatNum = 1;
             }
             else repeatNum += 1;
         }
+        if(savedRepeatNum < repeatNum) savedRepeatNum = repeatNum;
         if(repeatNum >= m) total +=1;
     }
 
     for(int i=0; i<n; i++){
         int target = 0;
+        int savedRepeatNum = 0;
         int repeatNum = 0;
         for(int j=0; j<n; j++){
             if(arr[j][i] != target){
+                if(savedRepeatNum < repeatNum) savedRepeatNum = repeatNum;
                 target = arr[j][i];
                 repeatNum = 1;
             }
             else repeatNum += 1;
         }
+        if(savedRepeatNum < repeatNum) savedRepeatNum = repeatNum;
         if(repeatNum >= m) total +=1;
     }
 
