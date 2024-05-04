@@ -22,7 +22,7 @@ int main() {
 
     int max = 0;
 
-    for(int x = 0; x<n; x++){
+    for(int x=0; x<n; x++){
         for(int y=0; y<m; y++){
             for(int row=1; row<=n; row++){
                 for(int col=1; col<=m; col++){
@@ -30,7 +30,7 @@ int main() {
                         int inner = 1;
                         for(int i = 0; i<row; i++){
                             for(int j=0; j<col; j++){
-                                if(arr[x+i][y+j] < 0){
+                                if(arr[x+i][y+j] <= 0){
                                     inner *= 0;
                                 }
                             }
