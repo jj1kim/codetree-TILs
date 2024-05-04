@@ -1,15 +1,10 @@
 #include <iostream>
 using namespace std;
 
-int n,m;
-
-bool isPossibleRec(int x, int y, int row, int col){
-    if((x>=0 && (x+row)<=n) && (y>=0 && (y+col)<=m)) return true;
-    else return false;
-}
-
 int main() {
     
+    int n,m;
+
     cin >> n >> m;
 
     int** arr = new int*[n];
@@ -20,13 +15,13 @@ int main() {
         }
     }
 
-    int max = 0;
+    int max = -1;
 
     for(int x=0; x<n; x++){
         for(int y=0; y<m; y++){
             for(int row=1; row<=n; row++){
                 for(int col=1; col<=m; col++){
-                    if(isPossibleRec(x,y,row,col)){
+                    if((x>=0 && (x+row)<=n) && (y>=0 && (y+col)<=m)){
                         int inner = 1;
                         for(int i = 0; i<row; i++){
                             for(int j=0; j<col; j++){
